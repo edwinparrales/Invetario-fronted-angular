@@ -1,0 +1,51 @@
+<div class="container">
+  <h3>Catalogo de producto</h3>
+  <div class="form-control">
+    <button routerLink="/frmcatprod" class="btn btn-primary"><i class="fas fa-plus"></i>Agregar</button>
+  </div>
+  <div class="row mt-2">
+    <div class="col-xl-10 col-md-10">
+
+      <div class="card mb-8">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          DataTable Example
+        </div>
+        <div class="card-body">
+          <table id="" class="table table-hover">
+            <thead>
+            <tr>
+              <th>Codigo-Ref</th>
+              <th>Descripcion</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Categoria</th>
+              <th>valor</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let pro of catalogoProducto">
+
+              <td>{{pro.codigoRef}}</td>
+              <td>{{pro.descripcion}}</td>
+              <td>{{pro.marca.nombre}}</td>
+              <td>{{pro.modelo}}</td>
+              <td>{{pro.idCategoria.descripcion}}</td>
+              <td>{{pro.valorProducto}}</td>
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button  class="btn btn-primary" (click)="probar()">Probar</button>
+</div>
+
+
