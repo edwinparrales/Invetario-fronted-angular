@@ -20,4 +20,17 @@ export class CatalogoProductoService {
       map((response:any) => response as CatalogoProducto[])
     );
     }
+
+    crear(catalogo:CatalogoProducto):Observable<CatalogoProducto>{
+      return this.httpClient.post<CatalogoProducto>(this.urlEndPoint+"guardar",catalogo,{headers:this.httpHeaders});
+    }
+
+    buscarCodigo(codigo:string):Observable<CatalogoProducto[]>{
+      return this.httpClient.get(`${this.urlEndPoint}buscarCodigo/${codigo}`).pipe(
+        map((response:any)=>response as CatalogoProducto[])
+      )
+
+    }
+
+
 }

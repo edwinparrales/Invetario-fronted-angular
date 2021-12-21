@@ -14,7 +14,7 @@ import { LayoutsidenavComponent } from './componentes/layoutsidenav/layoutsidena
 import { CategoriaComponent } from './componentes/categoria/categoria.component';
 import { FormularioCatalogoProductoComponent } from './componentes/formulario-catalogo-producto/formulario-catalogo-producto.component';
 import { ProductoInventarioComponent } from './componentes/producto-inventario/producto-inventario.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import{ HttpClientModule } from '@angular/common/http';
 import { MarcaComponent } from './componentes/marca/marca.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,12 +35,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     MatTableModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
-    MatChipsModule
+    MatChipsModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
